@@ -27,7 +27,7 @@ func findByIDAPI(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, string(j))
 }
 
-
-func uptimerobot(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello uptimerobot")
+func dailyQuoteAPI(w http.ResponseWriter, r *http.Request) {
+	j, _ := json.Marshal(quote.quoteOfTheDay())
+	fmt.Fprintln(w, string(j))
 }

@@ -25,8 +25,7 @@ func main() {
 	r.HandleFunc("/", randomAPI)
 	r.HandleFunc("/findbyid", findByIDAPI)
 	r.HandleFunc("/topic/{topic}", topicNameAPI)
-
-	r.HandleFunc("/uptimerobot", uptimerobot)
+	r.HandleFunc("/daily", dailyQuoteAPI)
 
 	fmt.Println("Server Started!")
 	log.Fatal(http.ListenAndServe(GetPort(), r))

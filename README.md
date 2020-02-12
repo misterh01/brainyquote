@@ -22,3 +22,6 @@ Parameters:
 
 Quote ID == `{topic_name}{section}_{index}`
 * example = `age1_12`
+
+## Get `/daily`
+get quote of the day
