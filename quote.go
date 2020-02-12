@@ -65,7 +65,7 @@ func (q *Quote) quoteOfTheDay() DailyQuote {
 	
 	c := colly.NewCollector()
 	c.OnHTML(".bqTopLevel .qotd_days .container .bqQt .oncl_q .img-responsive", func(e *colly.HTMLElement) {
-		alt := strings.Split(e.Attr("alt"), "-")
+		alt := strings.Split(e.Attr("alt"), " - ")
 		quote.Quote = alt[0]
 		quote.Author = alt[1]
     quote.Imgurl = "https://www.brainyquote.com" + e.Attr("data-img-url")
