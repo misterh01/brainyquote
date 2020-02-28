@@ -15,14 +15,14 @@ Query Parameter:
 ## GET `/topic/{topic_name}`
 get random quote from a topic
 
-Parameters: 
+Parameter: 
 `topic_name` = brainyquote topic name
 - read `topic_list.txt` to get current topic avaiable in this api..
 
 ## Get `/findbyid?id={id}`
 get quote by id
 
-Query Parament: 
+Query Parameter: 
 `id` = quote id 
 
 Quote ID == `{topic_name}{section}_{index}`
