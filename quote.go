@@ -26,14 +26,14 @@ func NewQuote() *Quote {
 	return &Quote{}
 }
 
-func (q *Quote) random() Quote {
+func (q *Quote) random(total int) []Quote {
 	ag := bson.D{
 		{Key: "$sample", Value: bson.D{
-			{Key: "size", Value: 1},
+			{Key: "size", Value: total},
 		}},
 	}
 
-	return find(ag)[0]
+	return find(ag)
 }
 
 func (q *Quote) topicByName(name string) Quote {

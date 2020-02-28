@@ -7,6 +7,11 @@ Get random quote from [BrainyQuote](https://www.brainyquote.com/) using this res
 ## GET `/`
 get random quote from random topic
 
+Query Parameter:
+  `total`(optional) = return total number of quotes. max = 10, default = 0
+
+
+
 ## GET `/topic/{topic_name}`
 get random quote from a topic
 
@@ -17,7 +22,7 @@ Parameters:
 ## Get `/findbyid?id={id}`
 get quote by id
 
-Parameters: 
+Query Parament: 
 `id` = quote id 
 
 Quote ID == `{topic_name}{section}_{index}`

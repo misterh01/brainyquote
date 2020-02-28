@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strconv"
 
 	"github.com/gorilla/mux"
 )
@@ -11,7 +12,12 @@ import (
 var quote = NewQuote()
 
 func randomAPI(w http.ResponseWriter, r *http.Request) {
-	j, _ := json.Marshal(quote.random())
+	total, err := strconv.Atoi(queryValue(r, "total"))
+	if err != nil || total <= 0 || total > 10{
+		total = 1
+	}
+
+	j, _ := json.Marshal(quote.random(total))
 	fmt.Fprintln(w, string(j))
 }
 
