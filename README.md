@@ -2,7 +2,7 @@
 ---
 Get random quote from [BrainyQuote](https://www.brainyquote.com/) using this rest api...
 
-### Base URL = `https://brainyquote.greenh.dev/`
+### Base URL = `https://brainyquote.misterh.dev/`
 ---
 ## GET `/`
 get random quote from random topic
